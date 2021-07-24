@@ -1,0 +1,7 @@
+version: "2.4"
+services:
+  yquotes_exporter:
+    restart: always
+    image: tillepille/yquotes_exporter:latest
+    ports:
+    - 9666:9666

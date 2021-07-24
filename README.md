@@ -17,20 +17,20 @@ The exporter has two endpoints.
 
 ```yaml
 scrape_configs:
-  - job_name: 'yquotes exporter'
-    scrape_interval: 10s
-    static_configs:
-      - targets: ['localhost:9666']
-  - job_name: 'yquotes'
-    scrape_interval: 15s
-    metrics_path: /price
-    params:
-      sym:
-        - AAPL
-        - MSFT
-        - GOOG
-    static_configs:
-      - targets: ['localhost:9666']
+- job_name: 'yquotes exporter'
+  scrape_interval: 10s
+  static_configs:
+    - targets: ['localhost:9666']
+- job_name: 'yquotes'
+  scrape_interval: 15s
+  metrics_path: /price
+  params:
+    sym:
+      - AAPL
+      - MSFT
+      - GOOG
+  static_configs:
+    - targets: ['localhost:9666']
 ```
 
 ## Sources
